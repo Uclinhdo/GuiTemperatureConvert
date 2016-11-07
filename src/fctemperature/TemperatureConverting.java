@@ -11,7 +11,11 @@ package fctemperature;
  */
 public class TemperatureConverting {
     private int celTemp;
-    public int getCelTemp(int franTemp){
+    public int getCelTemp(int franTemp) throws IllegalArgumentException{
+        //need validate
+        if(franTemp <0){
+            throw new IllegalArgumentException("Temperature is not valid!");
+        }
         return celTemp = (int) ((franTemp - 32)*0.5556);
     }
 }
