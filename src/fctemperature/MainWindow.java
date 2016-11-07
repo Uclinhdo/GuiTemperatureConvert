@@ -97,7 +97,7 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
         // TODO add your handling code here:
-        TemperatureConverting temp = new TemperatureConverting();
+        TemperatureConvertingService temp = new TemperatureConvertingService();
         int franTemp = Integer.parseInt(txtTemp.getText());
         String suffixMsg = "℃(Celcius)";
         lblCelciusTemp.setText(temp.getCelTemp(franTemp)+" "+suffixMsg);
